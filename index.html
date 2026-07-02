@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sania Jawed — Data Analyst & Power BI Developer</title>
+  <meta name="description" content="Sania Jawed — Data Analyst, Power BI Developer, and Data Visualization Specialist. Turning complex data into clear business decisions." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">Sania Jawed</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Sania Jawed</a>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" onclick="toggleMenu()">Home</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Available for Freelance & Full-time</div>
+    <h1 class="hero-headline">SANIA JAWED</h1>
+    <p class="hero-tagline-main">Transforming Data into Decisions</p>
+    <p class="hero-sub">Data Analyst | Power BI Developer | Dashboard Designer</p>
+    <div class="hero-typed">
+      <span id="typed-text"></span><span class="cursor-blink">|</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary ripple-container">
+        <span>View Projects</span> <span>→</span>
+      </a>
+      <a href="#contact" class="btn btn-ghost ripple-container">
+        <span>Contact Me</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val" data-count="20">0</div>
+        <div class="hero-stat-lbl">Projects Done</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-val" data-count="15">0</div>
+        <div class="hero-stat-lbl">Dashboards Built</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-val" data-count="5">0</div>
+        <div class="hero-stat-lbl">Competitions Won</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-val" data-count="10">0</div>
+        <div class="hero-stat-lbl">Tools Mastered</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero data visualization composition -->
+  <div class="hero-viz">
+    <div class="viz-blob viz-blob-1"></div>
+    <div class="viz-blob viz-blob-2"></div>
+
+    <!-- ambient drifting particles -->
+    <div class="viz-particle" style="width:5px;height:5px;top:80%;left:30%;animation-duration:5s;animation-delay:0s;"></div>
+    <div class="viz-particle" style="width:4px;height:4px;top:70%;left:60%;animation-duration:6.5s;animation-delay:1.2s;background:var(--violet);"></div>
+    <div class="viz-particle" style="width:6px;height:6px;top:90%;left:45%;animation-duration:5.8s;animation-delay:2.4s;background:var(--teal);"></div>
+    <div class="viz-particle" style="width:4px;height:4px;top:85%;left:75%;animation-duration:7s;animation-delay:0.6s;"></div>
+
+    <!-- small data-flow network accent -->
+    <svg class="viz-network" width="120" height="80" style="top:170px;left:110px;">
+      <line class="viz-network-line" x1="10" y1="40" x2="60" y2="15" stroke="var(--blue)" stroke-width="1.5"/>
+      <line class="viz-network-line" x1="60" y1="15" x2="110" y2="45" stroke="var(--violet)" stroke-width="1.5"/>
+      <line class="viz-network-line" x1="60" y1="15" x2="55" y2="65" stroke="var(--teal)" stroke-width="1.5"/>
+      <circle class="viz-network-dot" cx="10" cy="40" r="3" fill="var(--blue)"/>
+      <circle class="viz-network-dot" cx="60" cy="15" r="3" fill="var(--violet)" style="animation-delay:0.4s"/>
+      <circle class="viz-network-dot" cx="110" cy="45" r="3" fill="var(--teal)" style="animation-delay:0.8s"/>
+      <circle class="viz-network-dot" cx="55" cy="65" r="3" fill="var(--blue)" style="animation-delay:1.2s"/>
+    </svg>
+
+    <!-- Main dashboard card: KPIs + bar chart -->
+    <div class="viz-card viz-card-main">
+      <div class="viz-card-title">📊 Live Performance</div>
+      <div class="viz-kpi-row">
+        <div class="viz-kpi">
+          <div class="viz-kpi-val">£2.4M</div>
+          <div class="viz-kpi-lbl">Revenue</div>
+          <div class="viz-kpi-delta">▲ 18.4%</div>
+        </div>
+        <div class="viz-kpi">
+          <div class="viz-kpi-val">94.2%</div>
+          <div class="viz-kpi-lbl">Accuracy</div>
+          <div class="viz-kpi-delta">▲ 4.1%</div>
+        </div>
+      </div>
+      <div class="mini-bars">
+        <div class="mini-bar" style="height:30%;animation-delay:0.1s"></div>
+        <div class="mini-bar" style="height:55%;animation-delay:0.15s"></div>
+        <div class="mini-bar" style="height:45%;animation-delay:0.2s"></div>
+        <div class="mini-bar" style="height:80%;animation-delay:0.25s"></div>
+        <div class="mini-bar" style="height:65%;animation-delay:0.3s"></div>
+        <div class="mini-bar" style="height:90%;animation-delay:0.35s"></div>
+        <div class="mini-bar" style="height:70%;animation-delay:0.4s"></div>
+        <div class="mini-bar" style="height:100%;animation-delay:0.45s"></div>
+      </div>
+    </div>
+
+    <!-- Trend line card -->
+    <div class="viz-card viz-card-line">
+      <div class="viz-card-title">📈 Growth Trend</div>
+      <div class="viz-line-val">+27.8% <span class="viz-line-delta">QoQ</span></div>
+      <svg class="viz-line-svg" width="150" height="60" viewBox="0 0 150 60">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#1F6FDB"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <path class="viz-line-path" d="M5 45 Q25 50 35 35 T65 25 T95 15 T145 8"/>
+        <circle class="viz-line-dot" cx="145" cy="8" r="4" fill="#7C3AED"/>
+      </svg>
+    </div>
+
+    <!-- Donut chart card -->
+    <div class="viz-card viz-card-donut">
+      <div class="viz-card-title">🗂️ Data Sources</div>
+      <div class="donut-wrap">
+        <svg width="70" height="70" viewBox="0 0 80 80" class="donut-svg">
+          <circle cx="40" cy="40" r="28" fill="none" stroke="#EEF2F8" stroke-width="10"/>
+          <circle cx="40" cy="40" r="28" fill="none" stroke="url(#dg)" stroke-width="10"
+            stroke-dasharray="96 80" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="dg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1F6FDB"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <text x="40" y="45" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="700" fill="#1F6FDB">6</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="donut-item"><div class="donut-dot" style="background:#1F6FDB"></div>SQL / DB</div>
+          <div class="donut-item"><div class="donut-dot" style="background:#7C3AED"></div>Excel / CSV</div>
+          <div class="donut-item"><div class="donut-dot" style="background:#58B1A7"></div>API Feeds</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating skill badges around the composition -->
+    <div class="viz-floating-tag tag-1">📊 Power BI</div>
+    <div class="viz-floating-tag tag-2">🐍 Python</div>
+    <div class="viz-floating-tag tag-3">🗄️ SQL</div>
+    <div class="viz-floating-tag tag-4">📗 Excel</div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo">👩‍💻</div>
+    </div>
+    <div class="about-text reveal">
+      <span class="section-eyebrow">About Me</span>
+      <h2 class="section-title">Data Analyst who <span class="grad">Designs</span> for Impact</h2>
+      <p class="about-desc">
+        I'm Sania Jawed — a Data Analytics student at Delhi NCR specializing in Power BI, DAX, SQL, and Excel. I build competition-grade dashboards that don't just visualize data — they tell stories that drive decisions.
+      </p>
+      <p class="about-desc">
+        I build impactful analytics solutions through data visualization, storytelling, and business intelligence — turning raw, messy datasets into clean, interactive intelligence. My work bridges analytical rigor with design thinking, because I care about every pixel as much as every query.
+      </p>
+      <div class="about-tags">
+        <span class="about-tag">Power BI</span>
+        <span class="about-tag">DAX</span>
+        <span class="about-tag">SQL</span>
+        <span class="about-tag">Python</span>
+        <span class="about-tag">Data Visualization</span>
+        <span class="about-tag">Graphic Design</span>
+        <span class="about-tag">Product Analytics</span>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><div class="about-stat-val counter" data-count="20">0</div><div class="about-stat-lbl">Projects</div></div>
+        <div class="about-stat"><div class="about-stat-val counter" data-count="15">0</div><div class="about-stat-lbl">Dashboards</div></div>
+        <div class="about-stat"><div class="about-stat-val counter" data-count="5">0</div><div class="about-stat-lbl">Awards</div></div>
+        <div class="about-stat"><div class="about-stat-val counter" data-count="3">0</div><div class="about-stat-lbl">Platforms</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Skillset</span>
+    <h2 class="section-title">Tools I <span class="grad">Master</span></h2>
+    <p class="section-sub">Hover over a card to see more · Click to view proficiency</p>
+  </div>
+  <div class="skills-grid">
+    <!-- Row 1 - Data -->
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Power BI','Advanced — 2+ yrs. Star schemas, ZoomCharts, bookmarks, RLS.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">📊</div>
+      <div class="skill-name">Power BI</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-tooltip">Advanced · Competition-grade dashboards</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'DAX','Expert — Complex measures, time intelligence, dynamic calculations.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">⚡</div>
+      <div class="skill-name">DAX</div>
+      <div class="skill-level">Expert</div>
+      <div class="skill-tooltip">Expert · Complex calculated measures</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'SQL','Intermediate-Advanced — CTEs, window functions, star schema design.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🗄️</div>
+      <div class="skill-name">SQL</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-tooltip">Advanced · Window functions & CTEs</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Excel','Expert — Power Query, pivot tables, advanced formulas, VBA basics.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">📗</div>
+      <div class="skill-name">Excel</div>
+      <div class="skill-level">Expert</div>
+      <div class="skill-tooltip">Expert · Power Query & pivot tables</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Python','Intermediate — pandas, matplotlib, numpy for EDA and analysis.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🐍</div>
+      <div class="skill-name">Python</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-tooltip">Intermediate · pandas & EDA</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Power Query','Advanced — M language, data transformations, ETL pipelines.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🔄</div>
+      <div class="skill-name">Power Query</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-tooltip">Advanced · ETL & M language</div>
+    </div>
+    <!-- Row 2 - Design & Web -->
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'HTML/CSS','Intermediate — semantic HTML, glassmorphism, CSS animations, responsive design.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">HTML/CSS</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-tooltip">Intermediate · Responsive & animated</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'JavaScript','Beginner-Intermediate — Chart.js, DOM manipulation, interactivity.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">☕</div>
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-tooltip">Learning · Chart.js & DOM</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Figma','Intermediate — wireframes, UI components, design systems.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">Figma</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-tooltip">Intermediate · UI & wireframes</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Graphic Design','Advanced — layouts, typography, brand identity, visual design systems.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🖌️</div>
+      <div class="skill-name">Graphic Design</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-tooltip">Advanced · Visual identity & design</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'ZoomCharts','Intermediate — Drill Down PRO, network visuals, competition reports.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">🔍</div>
+      <div class="skill-name">ZoomCharts</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-tooltip">Intermediate · Competition visuals</div>
+    </div>
+    <div class="skill-card reveal" onclick="showSkillInfo(this,'Data Storytelling','Expert — headline metrics, insight hierarchy, KPI narrative structure.')">
+      <div class="skill-glow"></div>
+      <div class="skill-icon">📖</div>
+      <div class="skill-name">Data Storytelling</div>
+      <div class="skill-level">Expert</div>
+      <div class="skill-tooltip">Expert · Insights that drive action</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Portfolio</span>
+    <h2 class="section-title">Featured <span class="grad">Projects</span></h2>
+    <p class="section-sub">Hover any card to flip · Click for full case study</p>
+  </div>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProjects('powerbi',this)">Power BI</button>
+    <button class="filter-btn" onclick="filterProjects('analytics',this)">Analytics</button>
+    <button class="filter-btn" onclick="filterProjects('html',this)">HTML</button>
+    <button class="filter-btn" onclick="filterProjects('sql',this)">SQL</button>
+    <button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- Project 1 -->
+    <div class="project-card" data-cat="powerbi analytics" onclick="openModal('proj1')">
+      <div class="project-card-inner">
+        <div class="project-face project-front">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#1F6FDB22,#7C3AED22)">🛒</div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-category">Power BI · Analytics</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">UK E-Commerce Conversion & Sales Analytics</div>
+            <div class="project-desc">6-page Power BI dashboard analyzing 10,000 orders across a 13-table star schema. Conversion funnels, device-type filters, and cohort analysis.</div>
+            <div class="project-badges">
+              <span class="badge">Power BI</span>
+              <span class="badge violet">DAX</span>
+              <span class="badge teal">SQL</span>
+              <span class="badge">Python</span>
+            </div>
+            <div class="flip-hint"><span class="flip-hint-icon">↻</span> Hover to flip for case study</div>
+          </div>
+        </div>
+        <div class="project-face project-back">
+          <div>
+            <div class="back-cat">Power BI · DataBuzz June 2026</div>
+            <div class="back-title">UK E-Commerce Conversion & Sales Analytics</div>
+            <div class="back-desc">Reverse-engineered competition-winning dashboards, ran pandas analysis across a 13-table star schema to extract headline metrics, and resolved complex DAX circular dependencies and dual-relationship filter collisions.</div>
+          </div>
+          <div class="back-kpis">
+            <div class="back-kpi"><div class="back-kpi-val">10K</div><div class="back-kpi-lbl">Orders Analyzed</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">8.8/10</div><div class="back-kpi-lbl">Score Est.</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">6 pgs</div><div class="back-kpi-lbl">Dashboard Pages</div></div>
+          </div>
+          <div class="back-btns">
+            <a href="#" class="back-btn back-btn-primary" onclick="event.stopPropagation();openModal('proj1')">📋 Case Study</a>
+            <a href="https://github.com/saniajawed" target="_blank" class="back-btn back-btn-ghost" onclick="event.stopPropagation()">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card" data-cat="powerbi analytics" onclick="openModal('proj2')">
+      <div class="project-card-inner">
+        <div class="project-face project-front">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#58B1A722,#1F6FDB22)">🏥</div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-category">Power BI · Healthcare</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Code Blue — Emergency Operations Dashboard</div>
+            <div class="project-desc">3-page Power BI + HTML dashboard analyzing 9,994 patient visits across 11 UK hospitals. ZoomCharts scatter, readmission risk labels, and HTML fallback.</div>
+            <div class="project-badges">
+              <span class="badge">Power BI</span>
+              <span class="badge violet">DAX</span>
+              <span class="badge teal">HTML/CSS</span>
+              <span class="badge">ZoomCharts</span>
+            </div>
+            <div class="flip-hint"><span class="flip-hint-icon">↻</span> Hover to flip for case study</div>
+          </div>
+        </div>
+        <div class="project-face project-back">
+          <div>
+            <div class="back-cat">Power BI + HTML · FP20 Challenge 38</div>
+            <div class="back-title">Code Blue Emergency Operations</div>
+            <div class="back-desc">Dual-deliverable project: a full-stack Power BI dashboard and an HTML/Chart.js version built from scratch. Resolved blank readmission risk labels, data mismatches in summary cards, and ZoomCharts configuration issues.</div>
+          </div>
+          <div class="back-kpis">
+            <div class="back-kpi"><div class="back-kpi-val">9,994</div><div class="back-kpi-lbl">Patient Visits</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">11</div><div class="back-kpi-lbl">Hospitals</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">2</div><div class="back-kpi-lbl">Deliverables</div></div>
+          </div>
+          <div class="back-btns">
+            <a href="#" class="back-btn back-btn-primary" onclick="event.stopPropagation();openModal('proj2')">📋 Case Study</a>
+            <a href="https://github.com/saniajawed" target="_blank" class="back-btn back-btn-ghost" onclick="event.stopPropagation()">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" data-cat="powerbi analytics" onclick="openModal('proj3')">
+      <div class="project-card-inner">
+        <div class="project-face project-front">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#7C3AED22,#58B1A722)">🍺</div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-category">Power BI · Supply Chain</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">F&B Supply Chain — ZoomCharts 4U Report</div>
+            <div class="project-desc">4-page competitive Power BI dashboard for a food & beverage supply chain scenario with ZoomCharts Drill Down PRO visuals, DAX roadmap, and full strategy document.</div>
+            <div class="project-badges">
+              <span class="badge">Power BI</span>
+              <span class="badge violet">ZoomCharts</span>
+              <span class="badge teal">DAX</span>
+            </div>
+            <div class="flip-hint"><span class="flip-hint-icon">↻</span> Hover to flip for case study</div>
+          </div>
+        </div>
+        <div class="project-face project-back">
+          <div>
+            <div class="back-cat">Power BI · ZoomCharts Competition</div>
+            <div class="back-title">Food & Beverage Supply Chain Dashboard</div>
+            <div class="back-desc">Competition-grade dashboard strategy with detailed visual specifications, DAX implementation roadmap, and ZoomCharts Drill Down PRO configuration for supply chain KPI analysis.</div>
+          </div>
+          <div class="back-kpis">
+            <div class="back-kpi"><div class="back-kpi-val">4</div><div class="back-kpi-lbl">Dashboard Pages</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">ZC Pro</div><div class="back-kpi-lbl">Visuals Used</div></div>
+          </div>
+          <div class="back-btns">
+            <a href="#" class="back-btn back-btn-primary" onclick="event.stopPropagation();openModal('proj3')">📋 Case Study</a>
+            <a href="https://github.com/saniajawed" target="_blank" class="back-btn back-btn-ghost" onclick="event.stopPropagation()">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card" data-cat="html analytics" onclick="openModal('proj4')">
+      <div class="project-card-inner">
+        <div class="project-face project-front">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#22C55E22,#1F6FDB22)">💻</div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-category">HTML · Full-Stack</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Code Blue HTML Dashboard</div>
+            <div class="project-desc">Complete web version of the Code Blue dashboard built in pure HTML, CSS, and Chart.js — learned web dev from scratch to complement Power BI portfolio.</div>
+            <div class="project-badges">
+              <span class="badge">HTML</span>
+              <span class="badge violet">CSS</span>
+              <span class="badge teal">Chart.js</span>
+              <span class="badge">JS</span>
+            </div>
+            <div class="flip-hint"><span class="flip-hint-icon">↻</span> Hover to flip for case study</div>
+          </div>
+        </div>
+        <div class="project-face project-back">
+          <div>
+            <div class="back-cat">HTML · CSS · JavaScript</div>
+            <div class="back-title">Code Blue Emergency Ops — Web Version</div>
+            <div class="back-desc">First full web dev project — built from zero knowledge of HTML/CSS/JS. Glassmorphism design, animated KPI cards, Chart.js visualizations matching the Power BI version. Resolved persistent chart rendering issues to completion.</div>
+          </div>
+          <div class="back-kpis">
+            <div class="back-kpi"><div class="back-kpi-val">0→1</div><div class="back-kpi-lbl">Self-taught HTML</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">100%</div><div class="back-kpi-lbl">Self-built</div></div>
+          </div>
+          <div class="back-btns">
+            <a href="#" class="back-btn back-btn-primary" onclick="event.stopPropagation();openModal('proj4')">🌐 Live Demo</a>
+            <a href="https://github.com/saniajawed" target="_blank" class="back-btn back-btn-ghost" onclick="event.stopPropagation()">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card" data-cat="powerbi analytics" onclick="openModal('proj5')">
+      <div class="project-card-inner">
+        <div class="project-face project-front">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#EF444422,#7C3AED22)">❤️</div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-category">Power BI · Healthcare</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Hypertension Cardiology Patient Outcomes</div>
+            <div class="project-desc">Power BI dashboard for patient outcomes analysis in a cardiology context. Zion Tech Hub challenge with clinical KPIs and treatment pathway visualizations.</div>
+            <div class="project-badges">
+              <span class="badge">Power BI</span>
+              <span class="badge violet">DAX</span>
+              <span class="badge teal">Healthcare</span>
+            </div>
+            <div class="flip-hint"><span class="flip-hint-icon">↻</span> Hover to flip for case study</div>
+          </div>
+        </div>
+        <div class="project-face project-back">
+          <div>
+            <div class="back-cat">Power BI · Zion Tech Hub Challenge</div>
+            <div class="back-title">Cardiology Patient Outcomes Dashboard</div>
+            <div class="back-desc">Clinical analytics dashboard tracking treatment pathways, readmission rates, and patient outcome scores for hypertension cardiology cases across multiple facilities.</div>
+          </div>
+          <div class="back-kpis">
+            <div class="back-kpi"><div class="back-kpi-val">Clinical</div><div class="back-kpi-lbl">KPIs</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">ZTH</div><div class="back-kpi-lbl">Challenge</div></div>
+          </div>
+          <div class="back-btns">
+            <a href="#" class="back-btn back-btn-primary" onclick="event.stopPropagation();openModal('proj5')">📋 Case Study</a>
+            <a href="https://github.com/saniajawed" target="_blank" class="back-btn back-btn-ghost" onclick="event.stopPropagation()">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card" data-cat="html analytics" onclick="openModal('proj6')">
+      <div class="project-card-inner">
+        <div class="project-face project-front">
+          <div class="project-thumb">
+            <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#7C3AED22,#1F6FDB22)">📱</div>
+            <div class="project-thumb-overlay"></div>
+            <span class="project-category">HTML · Interactive Dashboard</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">From Instagram Brand to Profitable Business</div>
+            <div class="project-desc">Interactive business analytics dashboard built with HTML, CSS, JavaScript, and Chart.js — a storytelling dashboard tracking the journey from a social media page to a profitable brand.</div>
+            <div class="project-badges">
+              <span class="badge">HTML</span>
+              <span class="badge violet">CSS</span>
+              <span class="badge teal">JavaScript</span>
+              <span class="badge">Chart.js</span>
+            </div>
+            <div class="flip-hint"><span class="flip-hint-icon">↻</span> Hover to flip for case study</div>
+          </div>
+        </div>
+        <div class="project-face project-back">
+          <div>
+            <div class="back-cat">HTML · CSS · JavaScript · Chart.js</div>
+            <div class="back-title">From Instagram Brand to Profitable Business</div>
+            <div class="back-desc">A live analytics experience mapping the journey from social media growth to revenue — four-phase storytelling dashboard combining engagement metrics, conversion tracking, and business performance visualization, all hand-coded with scroll-triggered animations.</div>
+          </div>
+          <div class="back-kpis">
+            <div class="back-kpi"><div class="back-kpi-val">4</div><div class="back-kpi-lbl">Phases</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">Live</div><div class="back-kpi-lbl">Analytics</div></div>
+            <div class="back-kpi"><div class="back-kpi-val">100%</div><div class="back-kpi-lbl">Handcoded</div></div>
+          </div>
+          <div class="back-btns">
+            <a href="#" class="back-btn back-btn-primary" onclick="event.stopPropagation();openModal('proj6')">📋 Case Study</a>
+            <a href="https://github.com/saniajawed" target="_blank" class="back-btn back-btn-ghost" onclick="event.stopPropagation()">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Journey</span>
+    <h2 class="section-title">Education & <span class="grad">Achievements</span></h2>
+    <p class="section-sub">Milestones that shaped my analytical lens</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">2024 – 2027</span>
+        <div class="timeline-title">Diploma in Electronics & Communication Engineering</div>
+        <div class="timeline-sub">Jamia Millia Islamia</div>
+        <div class="timeline-desc">Foundational engineering diploma building a strong base in technical and analytical problem-solving, later channeled into data analytics and business intelligence.</div>
+        <div class="timeline-tags">
+          <span class="badge">Engineering</span><span class="badge violet">Technical Foundation</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">2026</span>
+        <div class="timeline-title">🥈 1st Runner-Up — Onyx DataDNA Challenge</div>
+        <div class="timeline-sub">International Data Visualization Competition</div>
+        <div class="timeline-desc">Placed 1st Runner-Up in the globally recognized Onyx DataDNA challenge — one of the most competitive Power BI monthly challenges. Recognized for dashboard design, DAX complexity, and insight quality.</div>
+        <div class="timeline-tags">
+          <span class="badge">Power BI</span><span class="badge violet">Competition</span><span class="badge teal">Award</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">2026</span>
+        <div class="timeline-title">FP20 Analytics Challenges — Multiple Placements</div>
+        <div class="timeline-sub">FP20 Community · Power BI Challenges</div>
+        <div class="timeline-desc">Multiple placement entries in FP20 Analytics monthly challenges. Challenge 38 (Code Blue) was a dual-deliverable project producing both Power BI and HTML dashboard versions.</div>
+        <div class="timeline-tags">
+          <span class="badge">Power BI</span><span class="badge violet">FP20</span><span class="badge teal">HTML</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">2026</span>
+        <div class="timeline-title">Freelance Analyst — Fiverr & Contra</div>
+        <div class="timeline-sub">Power BI · Data Analytics · Design</div>
+        <div class="timeline-desc">Active freelance presence on Fiverr and Contra offering Power BI dashboards, data analysis, and graphic design. Building a professional portfolio and client base alongside competition credentials.</div>
+        <div class="timeline-tags">
+          <span class="badge">Freelance</span><span class="badge violet">Fiverr</span><span class="badge teal">Contra</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Social Proof</span>
+    <h2 class="section-title">What People <span class="grad">Say</span></h2>
+  </div>
+  <div class="testimonials-track-wrap">
+    <div class="testimonials-track" id="testimonialTrack">
+      <!-- Set 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Sania's Power BI dashboards are absolutely world-class. The DAX complexity, visual polish, and storytelling — rarely see this level at competition submissions."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MK</div>
+          <div><div class="testimonial-name">Competition Judge</div><div class="testimonial-role">DataDNA Challenge · Onyx Data</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"The Code Blue dashboard was stunning — both the Power BI version and the HTML counterpart. She went above and beyond what was required."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FP</div>
+          <div><div class="testimonial-name">Community Reviewer</div><div class="testimonial-role">FP20 Analytics · Challenge 38</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Hired for a client analytics dashboard — delivered in half the time expected, with insights I hadn't even thought to ask for. Exceptional analytical instinct."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RC</div>
+          <div><div class="testimonial-name">Freelance Client</div><div class="testimonial-role">Fiverr · Power BI Project</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Sania combines analytical depth with design sensibility — her dashboards don't just answer questions, they make the answers impossible to misunderstand."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AN</div>
+          <div><div class="testimonial-name">LinkedIn Connection</div><div class="testimonial-role">Data Analytics Community</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Her work on the e-commerce conversion dashboard was meticulous — every filter context issue documented, every DAX measure explained. A true professional."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PD</div>
+          <div><div class="testimonial-name">Community Member</div><div class="testimonial-role">DataBuzz Challenge · June 2026</div></div>
+        </div>
+      </div>
+      <!-- Set 2 (duplicate for seamless scroll) -->
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Sania's Power BI dashboards are absolutely world-class. The DAX complexity, visual polish, and storytelling — rarely see this level at competition submissions."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MK</div>
+          <div><div class="testimonial-name">Competition Judge</div><div class="testimonial-role">DataDNA Challenge · Onyx Data</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"The Code Blue dashboard was stunning — both the Power BI version and the HTML counterpart. She went above and beyond what was required."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FP</div>
+          <div><div class="testimonial-name">Community Reviewer</div><div class="testimonial-role">FP20 Analytics · Challenge 38</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Hired for a client analytics dashboard — delivered in half the time expected, with insights I hadn't even thought to ask for. Exceptional analytical instinct."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RC</div>
+          <div><div class="testimonial-name">Freelance Client</div><div class="testimonial-role">Fiverr · Power BI Project</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Sania combines analytical depth with design sensibility — her dashboards don't just answer questions, they make the answers impossible to misunderstand."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AN</div>
+          <div><div class="testimonial-name">LinkedIn Connection</div><div class="testimonial-role">Data Analytics Community</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Her work on the e-commerce conversion dashboard was meticulous — every filter context issue documented, every DAX measure explained. A true professional."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PD</div>
+          <div><div class="testimonial-name">Community Member</div><div class="testimonial-role">DataBuzz Challenge · June 2026</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Services</span>
+    <h2 class="section-title">What I <span class="grad">Offer</span></h2>
+    <p class="section-sub">From raw data to strategic clarity — end-to-end analytics and design</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon-wrap">📊</div>
+      <div class="service-title">Power BI Dashboard Development</div>
+      <div class="service-desc">Competition-grade Power BI dashboards with complex DAX, custom visuals, star schemas, and storytelling-first design. Bookmarks, RLS, drill-through — fully production-ready.</div>
+      <div class="service-tags"><span class="badge">Power BI</span><span class="badge violet">DAX</span><span class="badge teal">Star Schema</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon-wrap">🧠</div>
+      <div class="service-title">Business Intelligence & Analytics</div>
+      <div class="service-desc">End-to-end BI solutions: requirements gathering, data modeling, ETL pipelines, KPI frameworks, and automated reporting. Turn raw data into decision-driving insight.</div>
+      <div class="service-tags"><span class="badge">SQL</span><span class="badge violet">Power Query</span><span class="badge teal">ETL</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon-wrap">📈</div>
+      <div class="service-title">Product Analytics</div>
+      <div class="service-desc">Funnel analysis, cohort studies, retention tracking, and conversion optimization for digital products. Translate user behavior data into product roadmap priorities.</div>
+      <div class="service-tags"><span class="badge">Funnels</span><span class="badge violet">Cohort</span><span class="badge teal">Retention</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon-wrap">🎨</div>
+      <div class="service-title">Data Visualization Design</div>
+      <div class="service-desc">Designing data stories that are both analytically rigorous and visually stunning. Custom color systems, layout hierarchies, and chart selection guided by information design principles.</div>
+      <div class="service-tags"><span class="badge">Figma</span><span class="badge violet">Charts</span><span class="badge teal">Design</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon-wrap">🌐</div>
+      <div class="service-title">Interactive Web Dashboards</div>
+      <div class="service-desc">HTML/CSS/JavaScript dashboard alternatives for when Power BI embed isn't an option. Chart.js, glassmorphism design, fully responsive — works in any browser.</div>
+      <div class="service-tags"><span class="badge">HTML</span><span class="badge violet">Chart.js</span><span class="badge teal">CSS</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon-wrap">🎨</div>
+      <div class="service-title">Graphic Design</div>
+      <div class="service-desc">Brand identity, social media graphics, and typography-led visual design. Bringing both technical precision and artistic sensitivity to visual communication.</div>
+      <div class="service-tags"><span class="badge">Branding</span><span class="badge violet">Typography</span><span class="badge teal">Visual Identity</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <span class="section-eyebrow">Let's Talk</span>
+      <h2 class="section-title">Ready to turn your <span class="grad">data</span> into decisions?</h2>
+      <p class="section-sub">Open for freelance projects, full-time roles, and competition collaborations. Let's build something impressive together.</p>
+      <div style="margin-top: 36px;">
+        <a href="mailto:saniajawed@email.com" class="contact-link-row">
+          <div class="contact-icon">📧</div>
+          <div><div class="contact-link-label">Email</div><div class="contact-link-val">saniajawed@email.com</div></div>
+        </a>
+        <a href="https://linkedin.com/in/saniajawed" target="_blank" class="contact-link-row">
+          <div class="contact-icon">💼</div>
+          <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-val">linkedin.com/in/saniajawed</div></div>
+        </a>
+        <a href="https://github.com/saniajawed" target="_blank" class="contact-link-row">
+          <div class="contact-icon">⭐</div>
+          <div><div class="contact-link-label">GitHub</div><div class="contact-link-val">github.com/saniajawed</div></div>
+        </a>
+        <a href="https://contra.com/saniajawed" target="_blank" class="contact-link-row">
+          <div class="contact-icon">🎯</div>
+          <div><div class="contact-link-label">Contra</div><div class="contact-link-val">contra.com/saniajawed</div></div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <div style="margin-bottom:24px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:6px;">Send a Message</div>
+        <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);">I respond within 24 hours.</div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-input" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-input" placeholder="Your surname" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="you@example.com" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <input type="text" class="form-input" placeholder="Power BI project / Job opportunity / Collaboration" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input" placeholder="Tell me about your project, dataset, or opportunity..."></textarea>
+      </div>
+      <div class="contact-btn-wrap">
+        <button class="btn btn-primary ripple-container" onclick="handleFormSubmit(this)" style="width:100%;justify-content:center;border:none;font-size:0.95rem;padding:15px 28px;">
+          Send Message →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-logo">Sania Jawed</div>
+  <div class="footer-links">
+    <a href="#hero">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="social-row">
+    <a href="https://github.com/saniajawed" target="_blank" class="social-btn" title="GitHub">⭐</a>
+    <a href="https://linkedin.com/in/saniajawed" target="_blank" class="social-btn" title="LinkedIn">💼</a>
+    <a href="https://twitter.com/saniajawed" target="_blank" class="social-btn" title="X/Twitter">🐦</a>
+    <a href="mailto:saniajawed@email.com" class="social-btn" title="Email">📧</a>
+    <a href="https://contra.com/saniajawed" target="_blank" class="social-btn" title="Contra">🎯</a>
+    <a href="https://fiverr.com/saniajawed" target="_blank" class="social-btn" title="Fiverr">💡</a>
+  </div>
+  <div class="footer-copy">© 2026 Sania Jawed — Turning Data Into Decisions · Built with precision & care</div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ============ MODALS ============ -->
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <!-- Dynamically filled -->
+  </div>
+</div>
+
+<!-- Skill info toast -->
+<div id="skillToast" style="
+  position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:#1A1F2E;color:white;padding:14px 24px;border-radius:var(--radius-md);
+  font-size:0.88rem;box-shadow:var(--shadow-xl);z-index:3000;
+  opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;
+  max-width:340px;text-align:center;
+">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
